@@ -105,7 +105,7 @@ class CustomBottomSheetState extends State<CustomBottomSheet> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Total Payment",
+                "Total Pembayaran",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,

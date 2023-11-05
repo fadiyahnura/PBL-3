@@ -12,7 +12,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<String> catList = ["ALL", "Makanan", "Minuman", "Barang"];
+  List<String> catList = ["SEMUA", "Makanan", "Minuman", "Barang"];
   List<String> imgList = ["jajan1", "drink", "buku"];
 
   final List<String> imageSliderList = [
@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          labelText: "Find Your Product",
+                          labelText: "Temukan Produk Anda",
                           border: InputBorder.none,
                           prefixIcon: Icon(
                             Icons.search,
@@ -129,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             padding: EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 18),
                             decoration: BoxDecoration(
-                              color: catList[i] == "ALL"
+                              color: catList[i] == "SEMUA"
                                   ? Color(0xFF4CC18C)
                                   : Color(0xFFECEDF0),
                               borderRadius: BorderRadius.circular(18),
@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               catList[i],
                               style: TextStyle(
                                 fontSize: 16,
-                                color: catList[i] == "ALL"
+                                color: catList[i] == "SEMUA"
                                     ? Colors.white
                                     : Color(0xFFA09C9C),
                               ),

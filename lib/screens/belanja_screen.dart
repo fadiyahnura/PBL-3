@@ -68,7 +68,7 @@ class _CartScreenState extends State<BelanjaScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Select ALL",
+                            "Pilih Semua",
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
@@ -93,7 +93,7 @@ class _CartScreenState extends State<BelanjaScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Total Payment",
+                            "Total pembayaran",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w600,
@@ -115,7 +115,7 @@ class _CartScreenState extends State<BelanjaScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Payment Method:",
+                          "Metode Pembayaran:",
                           style: TextStyle(
                             fontSize: 17,
                             fontWeight: FontWeight.w500,
