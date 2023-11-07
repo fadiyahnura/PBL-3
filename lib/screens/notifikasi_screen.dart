@@ -43,8 +43,8 @@ class NotifikasiScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                width: 320,
-                height: 568,
+                width: 350,
+                height: 600,
                 clipBehavior: Clip.antiAlias,
                 decoration: BoxDecoration(color: Colors.white),
                 child: Stack(

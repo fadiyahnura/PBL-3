@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<String> catList = ["SEMUA", "Makanan", "Minuman", "Barang"];
+  List<String> catList = ["Semua", "Makanan", "Minuman", "Barang"];
   List<String> imgList = ["jajan1", "drink", "buku"];
 
   final List<String> imageSliderList = [
@@ -141,7 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             padding: EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 18),
                             decoration: BoxDecoration(
-                              color: catList[i] == "SEMUA"
+                              color: catList[i] == "Semua"
                                   ? Color(0xFF4CC18C)
                                   : Color(0xFFECEDF0),
                               borderRadius: BorderRadius.circular(18),
@@ -150,7 +150,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               catList[i],
                               style: TextStyle(
                                 fontSize: 16,
-                                color: catList[i] == "SEMUA"
+                                color: catList[i] == "Semua"
                                     ? Colors.white
                                     : Color(0xFFA09C9C),
                               ),
