@@ -76,8 +76,12 @@ class _CartScreenState extends State<CartScreen> {
                           ),
                           Checkbox(
                             activeColor: Color(0xFF4CC18C),
-                            value: true,
-                            onChanged: (value) {},
+                            value:
+                                selectAll, // Menggunakan variabel selectAll untuk mengontrol status checkbox
+                            onChanged: (value) {
+                              // Panggil toggleSelectAll untuk memperbarui status selectAll
+                              toggleSelectAll(value!);
+                            },
                           ),
                         ],
                       ),

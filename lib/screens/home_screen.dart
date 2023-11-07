@@ -5,6 +5,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 // ignore: unused_import
 import 'package:viewapp/screens/belanja_screen.dart';
 import 'package:viewapp/screens/profil_screen.dart';
+// ignore: unused_import
+import 'package:viewapp/screens/notifikasi_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -68,10 +70,20 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Icon(
-                        Icons.notifications_none,
-                        size: 30,
-                        color: Colors.grey,
+                      child: InkWell(
+                        onTap: () {
+                          // Navigasi ke halaman notifikasi saat tombol notifikasi diklik
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => NotifikasiScreen()),
+                          );
+                        },
+                        child: Icon(
+                          Icons.notifications_none,
+                          size: 30,
+                          color: Colors.grey,
+                        ),
                       ),
                     ),
                   ],
