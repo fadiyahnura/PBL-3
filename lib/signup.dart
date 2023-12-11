@@ -1,219 +1,219 @@
 import 'package:flutter/material.dart';
-// ignore: unused_import
-import 'package:viewapp/screens/home_screen.dart';
+import 'package:viewapp/login.dart';
 
 class Signup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 320,
-          height: 568,
-          clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Colors.white),
-          child: Stack(
-            children: [
-              Positioned(
-                left: 41,
-                top: 145,
-                child: Container(
-                  width: 227,
-                  height: 320,
-                  decoration: BoxDecoration(color: Color(0xFF4CC18C)),
-                ),
-              ),
-              Positioned(
-                left: 119,
-                top: 111,
-                child: Container(
-                  width: 72,
-                  height: 69,
-                  decoration: ShapeDecoration(
-                    color: Colors.white,
-                    shape: OvalBorder(
-                      side: BorderSide(
-                        width: 1,
-                        strokeAlign: BorderSide.strokeAlignCenter,
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              width: 393,
+              height: 852,
+              clipBehavior: Clip.antiAlias,
+              decoration: BoxDecoration(color: Colors.white),
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 43,
+                    top: 127,
+                    child: Container(
+                      width: 308,
+                      height: 410,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF4CC18C),
+                        borderRadius: BorderRadius.circular(27),
                       ),
                     ),
                   ),
-                ),
-              ),
-              Positioned(
-                left: 124,
-                top: 128,
-                child: Container(
-                  width: 51,
-                  height: 34,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("images/logo.png"),
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 100,
-                top: 194,
-                child: Text(
-                  'REGISTRASI',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 62,
-                top: 232,
-                child: Container(
-                  width: 177,
-                  height: 36,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFECECEC),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 62,
-                top: 284,
-                child: Container(
-                  width: 177,
-                  height: 36,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFECECEC),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 62,
-                top: 336,
-                child: Container(
-                  width: 177,
-                  height: 36,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFECECEC),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 69,
-                top: 240,
-                child: Text(
-                  'Username',
-                  style: TextStyle(
-                    color: Color(0xFF7D7575),
-                    fontSize: 14,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w600,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 70,
-                top: 293,
-                child: Text(
-                  'Kata Sandi',
-                  style: TextStyle(
-                    color: Color(0xFF7D7575),
-                    fontSize: 14,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w600,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 74,
-                top: 347,
-                child: Text(
-                  'Masukan Ulang Password',
-                  style: TextStyle(
-                    color: Color(0xFF7D7575),
-                    fontSize: 10,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w600,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 86,
-                top: 388,
-                child: Container(
-                  width: 137,
-                  height: 36,
-                  decoration: ShapeDecoration(
-                    color: Colors.black,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 120,
-                top: 397,
-                child: Text(
-                  'Buat Akun',
-                  style: TextStyle(
-                    color: Color(0xFFD9D9D9),
-                    fontSize: 14,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w600,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 94,
-                top: 438,
-                child: Text.rich(
-                  TextSpan(
-                    children: [
-                      TextSpan(
-                        text: 'Sudah Punya ',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 13,
-                          fontFamily: 'Inter',
-                          fontWeight: FontWeight.w500,
-                          height: 0,
+                  Positioned(
+                    left: 83,
+                    top: 248,
+                    child: Container(
+                      width: 228,
+                      height: 43,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: 'Nama Pengguna',
+                          contentPadding: EdgeInsets.symmetric(
+                            vertical: 10.0,
+                            horizontal: 15.0,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25),
+                          ),
                         ),
                       ),
-                      TextSpan(
-                        text: 'akun?',
-                        style: TextStyle(
-                          color: Color(0xFF0084FF),
-                          fontSize: 13,
-                          fontFamily: 'Inter',
-                          fontWeight: FontWeight.w500,
-                          height: 0,
+                    ),
+                  ),
+                  Positioned(
+                    left: 83,
+                    top: 321,
+                    child: Container(
+                      width: 228,
+                      height: 43,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      child: TextFormField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          hintText: 'Kata Sandi',
+                          contentPadding: EdgeInsets.symmetric(
+                            vertical: 10.0,
+                            horizontal: 15.0,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25),
+                          ),
                         ),
                       ),
-                    ],
+                    ),
                   ),
-                ),
+                  Positioned(
+                    left: 83,
+                    top:
+                        394, // Adjusted position for the "Masukkan Ulang Sandi" field
+                    child: Container(
+                      width: 228,
+                      height: 43,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      child: TextFormField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          hintText: 'Masukkan Ulang Sandi',
+                          contentPadding: EdgeInsets.symmetric(
+                            vertical: 10.0,
+                            horizontal: 15.0,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 124,
+                    top: 500,
+                    child: GestureDetector(
+                      onTap: () {
+                        // Navigate to the Login screen when "Sudah punya akun?" is pressed
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Login()),
+                        );
+                      },
+                      child: RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'Sudah punya ',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                            TextSpan(
+                              text: 'akun?',
+                              style: TextStyle(
+                                color: Color(0xFF01A4FF),
+                                fontSize: 16,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 110,
+                    top: 161,
+                    child: Text(
+                      'Registrasi',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 40,
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 150,
+                    top: 55,
+                    child: Container(
+                      width: 100,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: const Color.fromARGB(255, 15, 15, 15),
+                          width: 4,
+                        ),
+                        color: Colors
+                            .grey, // Background color for the circular container
+                      ),
+                      child: Center(
+                        child: Container(
+                          width: 90,
+                          height: 90,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color:
+                                Colors.white, // Background color for the image
+                          ),
+                          child: Center(
+                            child: Image.asset(
+                              'images/logo.png', // Replace with the actual image path
+                              width: 75,
+                              height: 46,
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 150,
+                    top: 455,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // Navigate to the HomeScreen when the button is pressed
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Login()),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.black,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                      ),
+                      child: Text('Buat Akun'),
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

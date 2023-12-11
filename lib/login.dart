@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:viewapp/screens/home_screen.dart';
+import 'package:viewapp/signup.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -39,7 +40,7 @@ class Login extends StatelessWidget {
                       ),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'Username',
+                          hintText: 'Nama Pengguna',
                           contentPadding: EdgeInsets.symmetric(
                             vertical: 10.0,
                             horizontal: 15.0,
@@ -64,7 +65,7 @@ class Login extends StatelessWidget {
                       child: TextFormField(
                         obscureText: true,
                         decoration: InputDecoration(
-                          hintText: 'Password',
+                          hintText: 'Kata Sandi',
                           contentPadding: EdgeInsets.symmetric(
                             vertical: 10.0,
                             horizontal: 15.0,
@@ -79,28 +80,37 @@ class Login extends StatelessWidget {
                   Positioned(
                     left: 124,
                     top: 459,
-                    child: RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: 'Belum punya ',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
+                    child: GestureDetector(
+                      onTap: () {
+                        // Navigate to the Signup screen when "Belum punya akun?" is pressed
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Signup()),
+                        );
+                      },
+                      child: RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'Belum punya ',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
-                          ),
-                          TextSpan(
-                            text: 'akun?',
-                            style: TextStyle(
-                              color: Color(0xFF01A4FF),
-                              fontSize: 16,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
+                            TextSpan(
+                              text: 'akun?',
+                              style: TextStyle(
+                                color: Color(0xFF01A4FF),
+                                fontSize: 16,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -108,7 +118,7 @@ class Login extends StatelessWidget {
                     left: 140,
                     top: 161,
                     child: Text(
-                      'Login',
+                      'Masuk',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 40,
@@ -118,7 +128,7 @@ class Login extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    left: 140,
+                    left: 150,
                     top: 55,
                     child: Container(
                       width: 100,
@@ -143,7 +153,7 @@ class Login extends StatelessWidget {
                           ),
                           child: Center(
                             child: Image.asset(
-                              'images/logo.png', // Replace with actual image path
+                              'images/logo.png', // Replace with the actual image path
                               width: 75,
                               height: 46,
                               fit: BoxFit.contain,
@@ -158,7 +168,7 @@ class Login extends StatelessWidget {
                     top: 403,
                     child: ElevatedButton(
                       onPressed: () {
-// Navigate to the HomeScreen when the button is pressed
+                        // Navigate to the HomeScreen when the button is pressed
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => HomeScreen()),
@@ -170,7 +180,7 @@ class Login extends StatelessWidget {
                           borderRadius: BorderRadius.circular(25),
                         ),
                       ),
-                      child: Text('Login'),
+                      child: Text('Masuk'),
                     ),
                   ),
                 ],
