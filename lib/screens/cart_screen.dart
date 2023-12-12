@@ -7,15 +7,6 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
-  bool selectAll = false;
-  String paymentMethod = "COD"; // Default payment method
-
-  void toggleSelectAll(bool value) {
-    setState(() {
-      selectAll = value;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,36 +48,16 @@ class _CartScreenState extends State<CartScreen> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(top: 15),
+                padding: EdgeInsets.only(top: 20),
                 child: Column(
                   children: [
-                    CartItemSamples(),
-                    SizedBox(height: 30),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Pilih Semua",
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          Checkbox(
-                            activeColor: Color(0xFF4CC18C),
-                            value:
-                                selectAll, // Menggunakan variabel selectAll untuk mengontrol status checkbox
-                            onChanged: (value) {
-                              // Panggil toggleSelectAll untuk memperbarui status selectAll
-                              toggleSelectAll(value!);
-                            },
-                          ),
-                        ],
-                      ),
+                    // Adjusted size of the product image
+                    Container(
+                      width: double.infinity,
+                      child: CartItemSamples(),
                     ),
-                    SizedBox(height: 15),
+                    SizedBox(height: 30),
+                    SizedBox(height: 30),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Row(
@@ -111,62 +82,15 @@ class _CartScreenState extends State<CartScreen> {
                       ),
                     ),
                     SizedBox(height: 30),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Metode Pembayaran:",
-                          style: TextStyle(
-                            fontSize: 17,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        SizedBox(width: 30),
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                Radio(
-                                  value: "COD",
-                                  groupValue: paymentMethod,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      paymentMethod = value!;
-                                    });
-                                  },
-                                ),
-                                Text("COD"),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Radio(
-                                  value: "QR",
-                                  groupValue: paymentMethod,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      paymentMethod = value!;
-                                    });
-                                  },
-                                ),
-                                Text("QR"),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 30),
                     InkWell(
                       onTap: () {
-                        // Tambahkan logika untuk menangani pembayaran sesuai metode yang dipilih (COD atau QR)
-                        if (paymentMethod == "COD") {
-                          // Logika pembayaran COD
-                        } else if (paymentMethod == "QR") {
-                          // Logika pembayaran QR
-                        }
+                        // Add logic to handle payment according to the selected method
+                        // You can customize this part based on your requirements
+                        // For now, let's assume there's a function handlePayment() for the payment logic
+                        handlePayment();
                       },
                       child: Container(
+                        margin: EdgeInsets.only(top: 20), // Added margin
                         padding:
                             EdgeInsets.symmetric(vertical: 20, horizontal: 100),
                         decoration: BoxDecoration(
@@ -174,7 +98,7 @@ class _CartScreenState extends State<CartScreen> {
                           borderRadius: BorderRadius.circular(30),
                         ),
                         child: Text(
-                          "Bayar Sekarang",
+                          "Pesan Sekarang",
                           style: TextStyle(
                             fontSize: 17,
                             fontWeight: FontWeight.w600,
@@ -192,5 +116,11 @@ class _CartScreenState extends State<CartScreen> {
         ),
       ),
     );
+  }
+
+  // Placeholder for payment logic
+  void handlePayment() {
+    // Implement your payment logic here
+    // For example, navigate to a payment screen or execute a payment process
   }
 }

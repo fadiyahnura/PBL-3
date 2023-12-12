@@ -20,11 +20,6 @@ class CartItemSamples extends StatelessWidget {
             ),
             child: Row(
               children: [
-                Checkbox(
-                  activeColor: Color(0xFF4CC18C),
-                  value: true,
-                  onChanged: (value) {},
-                ),
                 Container(
                   height: 70,
                   width: 70,
