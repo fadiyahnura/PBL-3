@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:viewapp/screens/notifikasi_screen.dart';
 import 'package:viewapp/widgets/cart_item_samples.dart';
 
 class CartScreen extends StatefulWidget {
@@ -84,10 +85,11 @@ class _CartScreenState extends State<CartScreen> {
                     SizedBox(height: 30),
                     InkWell(
                       onTap: () {
-                        // Add logic to handle payment according to the selected method
-                        // You can customize this part based on your requirements
-                        // For now, let's assume there's a function handlePayment() for the payment logic
-                        handlePayment();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => NotifikasiScreen()),
+                        );
                       },
                       child: Container(
                         margin: EdgeInsets.only(top: 20), // Added margin
