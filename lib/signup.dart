@@ -128,7 +128,7 @@ class Signup extends StatelessWidget {
                             TextSpan(
                               text: 'akun?',
                               style: TextStyle(
-                                color: Color(0xFF01A4FF),
+                                color: Color.fromARGB(255, 0, 0, 0),
                                 fontSize: 16,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w400,
